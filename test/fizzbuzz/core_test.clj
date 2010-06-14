@@ -20,3 +20,8 @@
        13 13
        14 14
        15 "fizzbuzz"))
+
+(deftest apply-rule
+  (let [rule (create-rule 2 "popcorn")]
+    (is (= (rule 2) "popcorn"))
+    (is (= (rule 3) 3))))
