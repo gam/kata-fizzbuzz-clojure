@@ -9,6 +9,7 @@
        2 2
        3 "fizz"
        4 4
-       5 "buzz"))
+       5 "buzz"
+       6 "fizz"))
 
     
