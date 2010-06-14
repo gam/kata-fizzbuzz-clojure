@@ -28,7 +28,9 @@
 (deftest apply-multiple-rules-test
   (let [rules [(create-rule 2 "popcorn")
 	       (create-rule 7 "pineapple")]]
-    (is (= (apply-rules rules 7) "pineapple"))
-    (is (= (apply-rules rules 2) "popcorn"))
-    (is (= (apply-rules rules 3) 3))
-    (is (= (apply-rules rules 14) "popcornpineapple")))) 
+    (are [number expected]
+	 (= (apply-rules rules number) expected)
+	 7 "pineapple"
+	 2 "popcorn"
+	 3 3
+	 14 "popcornpineapple")))

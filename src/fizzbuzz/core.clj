@@ -3,16 +3,15 @@
 (defn- is-divisible-by? [divisor number]
   (zero? (mod number divisor)))
 
+(defn- fizzbuzz-rules []
+  [(create-rule 3 "fizz")
+   (create-rule 5 "buzz")])
+
 (defn fizzbuzz
   ([number]
-     (condp is-divisible-by? number
-       (* 3 5) "fizzbuzz"
-       3 "fizz"
-       5 "buzz"
-       number))
+     (fizzbuzz number (fizzbuzz-rules)))
   ([number rules]
-     (let [replacement (apply rules number)]
-       (if (empty? replacement) number replacement))))
+     (apply-rules rules number)))
 
 (defn create-rule [divisor replacement]
   (fn [number]
