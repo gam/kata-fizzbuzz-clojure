@@ -21,4 +21,18 @@
        14 14
        15 "fizzbuzz"))
 
+(deftest single-rule-test
+  (is (= ((create-rule 2 "coconut") 2) "coconut"))
+  (is (= ((create-rule 7 "pineapple") 7) "pineapple")))
+
+(deftest multiple-rules-test
+  (let [rules [(create-rule 2 "coconut")
+	       (create-rule 7 "pineapple")]]
+    (are [number expected]
+	 (= (fizzbuzz number rules) expected)
+	 2 "coconut"
+	 7 "pineapple"
+	 14 "coconutpineapple"
+	 3 3)))
+
 
