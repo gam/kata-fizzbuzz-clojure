@@ -3,7 +3,10 @@
   (:use [clojure.test]))
 
 (deftest fizzbuzz-test
-  (is (= (fizzbuzz 1) 1))
-  (is (= (fizzbuzz 2) 2))
-  (is (= (fizzbuzz 3) "fizz"))) 
+  (are [number expected]
+       (= (fizzbuzz number) expected)
+       1 1
+       2 2
+       3 "fizz"))
+
     
