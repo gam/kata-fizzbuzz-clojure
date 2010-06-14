@@ -21,7 +21,14 @@
        14 14
        15 "fizzbuzz"))
 
-(deftest apply-rule
+(deftest single-rule-test
   (let [rule (create-rule 2 "popcorn")]
-    (is (= (rule 2) "popcorn"))
-    (is (= (rule 3) 3))))
+    (is (= (rule 2) "popcorn"))))
+
+(deftest apply-multiple-rules-test
+  (let [rules [(create-rule 2 "popcorn")
+	       (create-rule 7 "pineapple")]]
+    (is (= (apply-rules rules 7) "pineapple"))
+    (is (= (apply-rules rules 2) "popcorn"))
+    (is (= (apply-rules rules 3) 3))
+    (is (= (apply-rules rules 14) "popcornpineapple")))) 

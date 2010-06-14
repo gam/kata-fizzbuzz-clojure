@@ -16,4 +16,8 @@
 
 (defn create-rule [divisor replacement]
   (fn [number]
-    (if (is-divisible-by? divisor number) replacement number)))
+    (if (is-divisible-by? divisor number) replacement)))
+
+(defn apply-rules [rules number]
+  (let [replacement (apply str ((apply juxt rules) number))]
+    (if (empty? replacement) number replacement)))
