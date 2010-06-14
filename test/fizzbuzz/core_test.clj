@@ -7,6 +7,8 @@
        (= (fizzbuzz number) expected)
        1 1
        2 2
-       3 "fizz"))
+       3 "fizz"
+       4 4
+       5 "buzz"))
 
     

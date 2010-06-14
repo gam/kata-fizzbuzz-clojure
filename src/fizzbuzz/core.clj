@@ -1,4 +1,7 @@
 (ns fizzbuzz.core)
 
 (defn fizzbuzz [number]
-  (if (= number 3) "fizz" number))
+  (condp = number
+      3 "fizz"
+      5 "buzz"   
+      number))
