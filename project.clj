@@ -12,7 +12,5 @@
     As an example, expand the FizzBuzz generator with the following behaviour:
     Numbers divisible by two are replaced by 'coconut' and numbers divisible 
     by seven are replaced by 'banana'."
-  :dependencies [[org.clojure/clojure "1.1.0"]
-                 [org.clojure/clojure-contrib "1.1.0"]]
-  :dev-dependencies [[swank-clojure "1.2.1"]
-		     [clojure-refactoring "0.1.5"]])
+  :dependencies [[org.clojure/clojure "1.2.0-beta1"]
+                 [org.clojure/clojure-contrib "1.2.0-beta1"]])
