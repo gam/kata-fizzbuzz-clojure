@@ -1,4 +1,6 @@
 (ns fizzbuzz.core)
 
 (defn fizzbuzz [number]
-  number)
+  (cond
+   (= number 3) "fizz"
+   :true number))
