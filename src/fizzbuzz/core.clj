@@ -5,6 +5,7 @@
    
 (defn fizzbuzz [number]
   (condp divisible-by number
-      3 "fizz"
-      5 "buzz"
-      number))
+    15 "fizzbuzz"
+    3 "fizz"
+    5 "buzz"
+    number))
