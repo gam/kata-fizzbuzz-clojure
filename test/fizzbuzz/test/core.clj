@@ -2,5 +2,5 @@
   (:use [fizzbuzz.core] :reload-all)
   (:use [clojure.test]))
 
-(deftest replace-me ;; FIXME: write
+(deftest fizzbuzz-test
   (is false "No tests have been written."))
