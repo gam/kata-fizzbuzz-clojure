@@ -17,3 +17,12 @@
 	banana-rule  (create-rule 7 "banana")]
     (is (= (coconut-rule 2) "coconut"))
     (is (= (banana-rule 7) "banana"))))
+
+(deftest fizzbuzz-rule-test
+  (let [rules [(create-rule 2 "coconut")
+	       (create-rule 7 "banana")]]
+    (is (= (fizzbuzz rules 2) "coconut"))
+    (is (= (fizzbuzz rules 7) "banana"))
+    (is (= (fizzbuzz rules 8) "coconut"))
+    (is (= (fizzbuzz rules 3) 3))
+    (is (= (fizzbuzz rules 14) "coconutbanana")))) 

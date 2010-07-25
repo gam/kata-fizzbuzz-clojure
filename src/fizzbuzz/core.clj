@@ -7,10 +7,14 @@
   (fn [number]
     (when (divisible-by divisor number) replacement)))
   
-(defn fizzbuzz [number]
-  (condp divisible-by number
-    15 "fizzbuzz"
-    3 "fizz"
-    5 "buzz"
-    number))
+(defn fizzbuzz
+  ([number]
+     (condp divisible-by number
+       15 "fizzbuzz"
+       3 "fizz"
+       5 "buzz"
+       number))
+  ([rules number]
+     (let [replacement (apply str ((apply juxt rules) number))]
+       (if (empty? replacement) number replacement))))
 
