@@ -6,15 +6,18 @@
 (defn create-rule [divisor replacement]
   (fn [number]
     (when (divisible-by divisor number) replacement)))
+
+(defn- apply-rules [rules number]
+  (let [replacement (apply str ((apply juxt rules) number))]
+    (if (empty? replacement) number replacement)))
   
+(defn- fizzbuzz-rules []
+  [(create-rule 3 "fizz")
+   (create-rule 5 "buzz")])
+
 (defn fizzbuzz
   ([number]
-     (condp divisible-by number
-       15 "fizzbuzz"
-       3 "fizz"
-       5 "buzz"
-       number))
+     (fizzbuzz (fizzbuzz-rules) number))
   ([rules number]
-     (let [replacement (apply str ((apply juxt rules) number))]
-       (if (empty? replacement) number replacement))))
+     (apply-rules rules number)))
 
