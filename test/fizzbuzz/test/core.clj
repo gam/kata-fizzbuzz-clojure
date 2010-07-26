@@ -3,4 +3,4 @@
   (:use [clojure.test]))
 
 (deftest fizzbuzz-test
-  (is false "Not implemented yet."))
+  (is (= (fizzbuzz 1) 1) "one is one"))
