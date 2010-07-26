@@ -3,12 +3,4 @@
   (:use [clojure.test]))
 
 (deftest fizzbuzz-test
-  (are [number expected]
-       (= (fizzbuzz number) expected)
-       1 1
-       2 2
-       3 "fizz"
-       5 "buzz"
-       6 "fizz"
-       10 "buzz"
-       15 "fizzbuzz"))
+  (is false "Not implemented yet."))
