@@ -15,8 +15,14 @@
 (deftest rule-test
   (let [coconut-rule (create-rule 2 "coconut")
 	banana-rule (create-rule 7 "banana")]
-    (is (= (coconut-rule 2) "coconut"))
-    (is (= (coconut-rule 4) "coconut"))
-    (is (= (banana-rule 7) "banana"))
-    (is (= (banana-rule 14) "banana"))
-    (is (= (coconut-rule 14) "coconut"))))
+    (testing "coconut rule"
+      (are [number expected]
+	   (= (coconut-rule number) expected)
+	   2 "coconut"
+	   4 "coconut"
+	   14 "coconut"))
+    (testing "banana rule"
+      (are [number expected]
+	   (= (banana-rule number) expected)
+	   7 "banana"
+	   14 "banana"))))
