@@ -6,4 +6,5 @@
   (are [number expected] (= (fizzbuzz number) expected)
        1 1 
        2 2
-       3 "fizz"))
+       3 "fizz"
+       5 "buzz"))
