@@ -26,3 +26,8 @@
 	   (= (banana-rule number) expected)
 	   7 "banana"
 	   14 "banana"))))
+
+(deftest fizzbuzz-rules-test
+  (let [rules [(create-rule 2 "coconut")
+	       (create-rule 7 "banana")]]
+    (is (= (fizzbuzz rules 2) "coconut"))))
