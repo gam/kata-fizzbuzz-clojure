@@ -17,6 +17,6 @@ Numbers divisible by two are replaced by 'coconut' and numbers divisible by seve
 There are several branches:
 
 * *master*
- ** Initial kata setup, with only a clojure project with test and implementation files in place
+    * Initial kata setup, with only a clojure project with test and implementation files in place
 * *1st_attempt* through *7th_attempt*
- ** Attempts at solving the kata efficiently, experimenting with different solution variations and intermediary steps.     
+    * Attempts at solving the kata efficiently, experimenting with different solution variations and intermediary steps.     
