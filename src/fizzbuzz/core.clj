@@ -15,4 +15,5 @@
        5 "buzz"
        number))
   ([rules number]
-     (apply str ((apply juxt rules) number))))
+     (let [replacement (apply str ((apply juxt rules) number))]
+       (if (empty? replacement) number replacement))))
