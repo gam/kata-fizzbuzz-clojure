@@ -2,7 +2,7 @@ Kata repository for FizzBuzz in Clojure
 =======================================
 
 This is a repository that can be used as a starting point for doing a Clojure version of the FizzBuzz kata. 
-It is based on the description of the FizzBuzz kata on the Coding Dojo WIKI: http://codingdojo.org/cgi-bin/wiki.pl?KataFizzBuzz
+It is based on the [description of the FizzBuzz kata](http://codingdojo.org/cgi-bin/wiki.pl?KataFizzBuzz) on the [Coding Dojo WIKI](http://codingdojo.org/).
 
 The problem definition is as follows:
 
@@ -16,7 +16,7 @@ Numbers divisible by two are replaced by 'coconut' and numbers divisible by seve
 
 There are several branches:
 
-* *master*
+* **master**
     * Initial kata setup, with only a clojure project with test and implementation files in place
-* *1st_attempt* through *7th_attempt*
+* **1st_attempt** through **7th_attempt**
     * Attempts at solving the kata efficiently, experimenting with different solution variations and intermediary steps.     
