@@ -30,4 +30,6 @@
 (deftest fizzbuzz-rules-test
   (let [rules [(create-rule 2 "coconut")
 	       (create-rule 7 "banana")]]
-    (is (= (fizzbuzz rules 2) "coconut"))))
+    (is (= (fizzbuzz rules 2) "coconut"))
+    (is (= (fizzbuzz rules 4) "coconut"))
+    (is (= (fizzbuzz rules 7) "banana"))))
