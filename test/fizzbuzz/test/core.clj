@@ -30,5 +30,7 @@
 	       (create-rule 7 "banana")]]
     (are [number expected] (= (fizzbuzz rules number) expected)
 	 2 "coconut"
+	 3 3
 	 4 "coconut"
-	 7 "banana")))
+	 7 "banana"
+	 14 "coconutbanana")))
