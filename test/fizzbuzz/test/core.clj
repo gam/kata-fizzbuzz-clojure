@@ -16,20 +16,19 @@
   (let [coconut-rule (create-rule 2 "coconut")
 	banana-rule (create-rule 7 "banana")]
     (testing "coconut rule"
-      (are [number expected]
-	   (= (coconut-rule number) expected)
+      (are [number expected] (= (coconut-rule number) expected)
 	   2 "coconut"
 	   4 "coconut"
 	   14 "coconut"))
     (testing "banana rule"
-      (are [number expected]
-	   (= (banana-rule number) expected)
+      (are [number expected] (= (banana-rule number) expected)
 	   7 "banana"
 	   14 "banana"))))
 
 (deftest fizzbuzz-rules-test
   (let [rules [(create-rule 2 "coconut")
 	       (create-rule 7 "banana")]]
-    (is (= (fizzbuzz rules 2) "coconut"))
-    (is (= (fizzbuzz rules 4) "coconut"))
-    (is (= (fizzbuzz rules 7) "banana"))))
+    (are [number expected] (= (fizzbuzz rules number) expected)
+	 2 "coconut"
+	 4 "coconut"
+	 7 "banana")))
