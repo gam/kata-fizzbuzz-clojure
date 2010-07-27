@@ -6,7 +6,7 @@ It is based on the [description of the FizzBuzz kata](http://codingdojo.org/cgi-
 
 The problem definition is as follows:
 
-Write a program that prints the numbers from 1 to 100, but for multiples of three print "fizz" and for multiples of five print "buzz". For numbers which are multiples of both three and five print 'fizzbuzz'.
+Write a program that prints the numbers from 1 to 100, but for multiples of three print 'fizz' and for multiples of five print 'buzz'. For numbers which are multiples of both three and five print 'fizzbuzz'.
 
 A further requirement for the kata: 
 The FizzBuzz generator should be programmable; introducing new substitutions should be as simple as introducing a new rule.
