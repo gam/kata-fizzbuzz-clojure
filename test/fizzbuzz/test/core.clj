@@ -7,4 +7,5 @@
        1 1
        2 2
        3 "fizz"
-       5 "buzz"))
+       5 "buzz"
+       6 "fizz"))
