@@ -3,4 +3,5 @@
   (:use [clojure.test]))
 
 (deftest fizzbuzz-test
-  (is (= (fizzbuzz 1) 1) "one is one"))
+  (is (= (fizzbuzz 1) 1) "one is one")
+  (is (= (fizzbuzz 2) 2) "two is two"))
