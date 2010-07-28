@@ -17,5 +17,7 @@
 	banana-rule (create-rule 7 "banana")]
     (is (= (coconut-rule 2) "coconut"))
     (is (= (coconut-rule 4) "coconut"))
-    (is (= (banana-rule 7) "banana"))))
+    (is (= (coconut-rule 14) "coconut"))
+    (is (= (banana-rule 7) "banana"))
+    (is (= (banana-rule 14) "banana"))))
     
