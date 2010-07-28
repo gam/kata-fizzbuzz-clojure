@@ -14,4 +14,6 @@
 
 (deftest rule-test
   (let [coconut-rule (create-rule 2 "coconut")]
-    (is (= (coconut-rule 2) "coconut"))))
+    (is (= (coconut-rule 2) "coconut"))
+    (is (= (coconut-rule 4) "coconut"))))
+    
