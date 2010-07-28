@@ -1,6 +1,6 @@
 (ns fizzbuzz.core)
 
-(defn divisible-by [divisor number]
+(defn- divisible-by [divisor number]
   (zero? (mod number divisor)))
 
 (defn create-rule [divisor replacement]
