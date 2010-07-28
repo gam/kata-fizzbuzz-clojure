@@ -5,4 +5,5 @@
 (deftest fizzbuzz-test
   (are [number expected] (= (fizzbuzz number) expected)
        1 1
-       2 2))
+       2 2
+       3 "fizz"))
