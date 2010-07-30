@@ -20,4 +20,7 @@
     (is (= (coconut-rule 14) "coconut"))
     (is (= (banana-rule 7) "banana"))
     (is (= (banana-rule 14) "banana"))))
-    
+
+(deftest fizzbuzz-rule-test
+  (let [rules [(create-rule 2 "coconut")]]
+    (is (= (fizzbuzz rules 2) "coconut"))))
