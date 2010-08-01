@@ -3,6 +3,9 @@
 (defn- divisible-by [divisor number]
   (zero? (mod number divisor)))
 
+(defn- apply-rules [rules number]
+  (apply str ((apply juxt rules) number)))
+
 (defn create-rule [divisor replacement]
   (fn [number]
     (when (divisible-by divisor number) replacement)))
@@ -15,4 +18,4 @@
        5 "buzz"
        number))
   ([rules number]
-     (apply str ((apply juxt rules) number))))
+     (apply-rules rules number)))
