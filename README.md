@@ -20,3 +20,5 @@ There are several branches:
     * Initial kata setup, with only a clojure project with test and implementation files in place
 * **1st_attempt** through **7th_attempt**
     * Attempts at solving the kata efficiently, experimenting with different solution variations and intermediary steps.     
+* **candidate**
+    * Resulting kata steps, broken down in single step commits (new test, passing test or refactoring of code or tests)
