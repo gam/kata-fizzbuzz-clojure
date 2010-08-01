@@ -22,6 +22,8 @@
     (is (= (banana-rule 14) "banana"))))
 
 (deftest fizzbuzz-rule-test
-  (let [rules [(create-rule 2 "coconut")]]
+  (let [rules [(create-rule 2 "coconut")
+	       (create-rule 7 "banana")]]
     (is (= (fizzbuzz rules 2) "coconut"))
-    (is (= (fizzbuzz rules 4) "coconut"))))
+    (is (= (fizzbuzz rules 4) "coconut"))
+    (is (= (fizzbuzz rules 7) "banana"))))
