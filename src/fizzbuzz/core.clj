@@ -15,4 +15,4 @@
        5 "buzz"
        number))
   ([rules number]
-     ((first rules) number)))
+     (apply str ((apply juxt rules) number))))
