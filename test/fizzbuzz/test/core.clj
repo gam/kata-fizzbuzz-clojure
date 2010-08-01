@@ -24,8 +24,9 @@
 (deftest fizzbuzz-rule-test
   (let [rules [(create-rule 2 "coconut")
 	       (create-rule 7 "banana")]]
-    (is (= (fizzbuzz rules 2) "coconut"))
-    (is (= (fizzbuzz rules 4) "coconut"))
-    (is (= (fizzbuzz rules 7) "banana"))
-    (is (= (fizzbuzz rules 14) "coconutbanana"))
-    (is (= (fizzbuzz rules 3) 3))))
+    (are [number expected] (= (fizzbuzz rules number) expected)
+	 2 "coconut"
+	 4 "coconut"
+	 7 "banana"
+	 14 "coconutbanana"
+	 3 3)))
