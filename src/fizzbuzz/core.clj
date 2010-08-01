@@ -1,5 +1,8 @@
 (ns fizzbuzz.core)
 
+(def *default-rules* [(create-rule 3 "fizz")
+		      (create-rule 5 "buzz")])
+
 (defn- divisible-by [divisor number]
   (zero? (mod number divisor)))
 
@@ -12,11 +15,7 @@
 
 (defn fizzbuzz
   ([number]
-     (condp divisible-by number
-       15 "fizzbuzz"
-       3 "fizz"
-       5 "buzz"
-       number))
+     (fizzbuzz *default-rules* number))
   ([rules number]
      (let [replacement (apply-rules rules number)]
        (if (empty? replacement) number replacement))))
