@@ -18,4 +18,5 @@
        5 "buzz"
        number))
   ([rules number]
-     (apply-rules rules number)))
+     (let [replacement (apply-rules rules number)]
+       (if (empty? replacement) number replacement))))
